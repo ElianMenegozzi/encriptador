@@ -1,0 +1,66 @@
+<!-- Este es el HTML de nuestra página web -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" media="(min-width: 800px)" href="/css/grid.css">
+    <link rel="stylesheet" media="(min-width: 426px) and (max-width: 800px)" href="/css/tablet.css">
+    <link rel="stylesheet" media="(max-width: 426px)" href="/css/mobile.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon error -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+    <title>Encriptador</title>
+  </head>
+  <body>
+
+      <header>
+        <div class="container-header">
+
+            <img class="img-logo" src="/Imagenes/Vector.png" alt="Logo Alura">
+            <button class="darkmode" id="dark-mode" onclick="document.documentElement.classList.toggle('dark-mode')"> Dark mode</button>
+        </div>
+      </header>
+
+      <main>
+        <!-- Creamos dos campos de texto y tres botones -->
+        <section class="container-big-area">
+            <textarea class="big-area" name="encriptador" id="texto-a-encriptar" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <p class="text"><span class="material-symbols-outlined">
+            error
+            </span>&nbsp; Solo letras minúsculas y sin acentos</p>
+        </section>
+  
+        <section class="container-small-area">
+           <textarea class="small-area" name="textos-encriptado" id="texto-encriptado" placeholder="No se encontró ningún mensaje"></textarea>
+               <!-- Boton copiar -->
+           <button class="btn-copy" onclick="copyToClipBoard()">Copiar</button>
+           
+        </section>
+
+        <section class="container-btn">
+            <!-- Boton encriptar -->
+        <button class="btn-encrypt" type="button" id="boton-encriptado">Encriptar</button>
+            <!-- Boton desencriptar -->
+        <button class="btn-decrypt" type="button" id="desencriptar-button">Desencriptar</button>
+        </section>
+
+      </main>
+
+      <footer>
+        <p class="end">Elian Menegozzi - Encriptador / Desencriptador - 2023 - &copy</p>
+      </footer>
+
+    <!-- Incluimos nuestro script de JavaScript al final de la página -->
+      <script src="/main.js"></script>
+  </body>
+</html>
